@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Board_Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: darkblue;
+}
+.Board_Container h1 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 3rem;
+}
+.board_row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+.Square {
+  border: 1px solid white;
+  color: white;
+  height: 150px;
+  border-radius: 10px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.4s ease-in-out;
+  box-shadow: rgb(33, 178, 227) 0px 5px 15px;
+}
+.Square:hover {
+  background-color: rgb(33, 178, 227);
+  transition: 0.4s ease-in-out;
+}
+@media (max-width: 768px) {
+  .Board_Container h1 {
+    font-size: 2rem;
+  }
+  .board_row {
+    width: 100%;
+  }
+  .Square {
+    width: 30%;
+  }
+}
+@media (max-width: 425px) {
+  .board_row {
+    width: 100%;
+  }
+  .Board_Container {
+    padding: 10px;
+  }
+  .Square {
+    width: 30%;
+    height: 100px;
+  }
+  .Board_Container h1 {
+    font-size: 1.5rem;
+  }
+}
